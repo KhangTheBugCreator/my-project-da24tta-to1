@@ -1,1 +1,80 @@
-﻿
+﻿*{
+	box-sizing:border-box;
+}
+body{
+	background-color:#F5F5F5;
+	font-family: "Poppins", sans-serif;
+	
+}
+.head{	
+	padding:15px 30px 10px 15px;
+}
+.main-content{
+	background-color:#51E8CC;
+	margin-left:auto;
+	margin-right:auto;
+}
+.head .name_title{
+	display:flex;
+	justify-content:center;
+	flex-direction:column;
+	color:white;
+	align-items:center;
+	gap:10px;
+	margin-left:450px;
+}
+.head .name_title .name, .head .name_title .title{
+	text-shadow: 29px 13px 5px rgba(20,41,94,0.86);
+	text-transform:uppercase;
+
+}
+.head .main-content{
+	display:flex;
+	justify-content:left;
+	box-shadow: 5px -6px 9px 4px rgba(0,0,0,0.31);
+	border-radius: 32px;
+	max-width:2500px;
+}
+.head .main-content:hover{
+	box-shadow: 8px 4px 13px 10px rgba(0,0,0,0.66);
+}	
+.head .main-content .logo_tvu img{
+	width:50px;
+	margin-top:20px;
+	margin-left:20px;
+	
+}
+.Thong_tin_chung .main-content{
+	box-shadow: 5px -6px 9px 4px rgba(0,0,0,0.31);
+	border-radius: 32px;
+}
+.avatar_info{
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	padding:20px;
+	gap:50px;
+}
+.avatar_info .avatar img{
+	border-radius:20px;
+	
+}
+#gioiThieuBanThan{
+	display:flex;
+	justify-content:center;
+	align-items:top;
+	padding-bottom:15px;
+	font-weight:bolder;
+	font-size:25px;
+	color:white;
+	text-shadow: 3px 5px 5px rgba(20,41,94,0.86);
+	text-transform: uppercase;
+}
+#DoanGioiThieu{
+	line-height:30px;
+	background-color:#9DFAF8;
+	border-radius:5px;
+	
+	box-shadow: 5px 2px 24px 13px rgba(0,0,0,0.32);
+}
+	
