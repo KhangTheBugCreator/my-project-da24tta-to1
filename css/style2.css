@@ -1,88 +1,120 @@
-*{
-    padding:0px;
-    margin:0px;
-    box-sizing: border-box;
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  user-select: none;
 }
-body{
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    background-image: url(../assets/images/background-img-login.jpg);
+body {
+  height: 100vh;
+  display: flex;
+  font-family: Arial, Helvetica, sans-serif;
+  align-items: center;
+  background-image: url(../assets/images/background-img-login.jpg);
 }
-.container{
-    max-width: 100%;
-    margin:auto;
-    padding: 20px;
-    /* background: #f8faee; */
-    /* background: rgb(255, 255, 255); */
-    background: #ffffff;
-    background: linear-gradient(90deg,rgba(245, 242, 242, 1) 0%, rgba(228, 247, 223, 1) 32%, rgba(232, 232, 200, 1) 75%);    padding: 50px;
-    border-radius:10px;
-    box-shadow: 0px 2px 6px 5px rgba(0,0,0,0.39);
+.container {
+  max-width: 100%;
+  margin: auto;
+  padding: 20px;
+  /* background: #f8faee; */
+  /* background: rgb(255, 255, 255); */
+  /* background: #ffffff;
+  background: linear-gradient(
+    90deg,
+    rgba(245, 242, 242, 1) 0%,
+    rgba(228, 247, 223, 1) 32%,
+    rgba(232, 232, 200, 1) 75%
+  ); */
+  background: #46bde8;
+  background: linear-gradient(
+    90deg,
+    rgba(70, 189, 232, 1) 0%,
+    rgba(230, 186, 186, 1) 61%,
+    rgba(224, 219, 162, 1) 95%
+  );
+  backdrop-filter: blur(30px);
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 6px 5px rgba(0, 0, 0, 0.39);
 }
-.frmLogin{
-    width: 100%;
-    padding: 20px;
-
+.frmLogin {
+  width: 100%;
+  padding: 20px;
 }
-h3.title{
-    text-align: center;
-    font-size: 1.875rem;
-    margin-bottom: 50px;
-    max-width: 100%;
+h3.title {
+  text-align: center;
+  font-size: 1.875rem;
+  margin-bottom: 50px;
+  max-width: 100%;
 }
-.UserName{
-    display: flex;
-    justify-content: center;
-    margin-bottom: 15px;
-    gap:10px;
-    width: 100%;
-
+.UserName {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+  gap: 10px;
+  width: 100%;
 }
-.UserName .txtUserName{
-    font-size:1.2rem;
+.UserName .txtUserName {
+  font-size: 1.2rem;
 }
-.Password{
-    display: flex;
-    justify-content: center;
-    margin-bottom: 30px;
-    padding-left: 45px;
-    gap:10px;
-    max-width: 100%;
-
+.Password {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  padding-left: 45px;
+  gap: 10px;
+  max-width: 100%;
 }
-.Password .txtPassword{
-    font-size: 1.2rem;
+.Password .txtPassword {
+  font-size: 1.2rem;
 }
-.form-group{
-    width: 100%;
+.form-group {
+  width: 100%;
 }
-.control{
-    display: flex;
-    justify-content: center;
-    gap:20px;
-    width: 100%;
-}   
-.form-group input{
-    padding: 2px;
-    border: none;
-    border-bottom: 1px solid black;
-    
+.control {
+  display: flex;
+  justify-content: right;
+  gap: 20px;
+  width: 100%;
 }
-.control input{
-    border: none;
-    background-color: rgb(139, 139, 243);
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 3px;
-    padding-right: 3px;
-    color:white;
-    cursor: pointer;
-    border-radius: 10px;
-    width: 40%;
-
+.form-group input {
+  padding: 2px;
+  border: none;
+  border-bottom: 1px solid black;
+  background: rgba(255, 255, 255, 0);
 }
-input:focus{
-    outline: none;
+.control input {
+  border: none;
+  padding: 0;
+  background-color: rgb(170, 170, 246);
+  line-height: 2;
+  padding-left: 3px;
+  padding-right: 3px;
+  color: white;
+  cursor: pointer;
+  border-radius: 10px;
+  width: 40%;
+  text-align: center;
+  box-shadow: 1px 3px 12px 2px rgba(0, 0, 0, 0.42);
 }
-
+input:focus {
+  outline: none;
+}
+.control input:hover {
+  box-shadow: none;
+  font-weight: bold;
+}
+.sign-in {
+  display: flex;
+  justify-content: right;
+  margin-top: 20px;
+}
+.sign-in p {
+  font-size: 0.86rem;
+  opacity: 67%;
+}
+.sign-in p a {
+  cursor: pointer;
+}
+.sign-in p a:hover {
+  opacity: 67%;
+}

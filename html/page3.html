@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Đăng Ký</title>
+    <link rel="stylesheet" href="../css/style3.css" />
+  </head>
+  <body>
+    <div class="container">
+      <form action="" class="frmRegister">
+        <h3 class="title">Đăng Ký Tài Khoản</h3>
+        <div class="content">
+          <div class="hoTen">
+            <label for="Name">Họ Tên:</label>
+            <input name="Name" type="text" id="Name" />
+          </div>
+          <div class="ngaySinh">
+            <label for="birth">Ngày Sinh:</label>
+            <input type="date" id="birth" />
+          </div>
+          <div class="Username">
+            <label for="txtUsername">Tên Đăng Nhập:</label>
+            <input id="txtUsername" type="text" />
+          </div>
+          <div class="Password">
+            <div class="pass">
+              <label for="txtPassword">Mật Khẩu:</label>
+              <input type="Password" id="txtPassword" />
+            </div>
+            <div class="confirm-pass">
+              <label for="ConfirmPassword">Nhập Lại Mật Khẩu:</label>
+              <input type="Password" id="ConfirmPassword" />
+            </div>
+          </div>
+          <div class="chonLop">
+            <label for="selectClass" class="Class">Lớp:</label>
+            <select name="ClassCode" id="selectClass">
+              <option value="none">Chọn Mã Lớp</option>
+              <option value="DA24TTA">DA24TTA</option>
+              <option value="DA24TTB">DA24TTB</option>
+              <option value="DA24TTC">DA24TTC</option>
+              <option value="DA24TTD">DA24TTD</option>
+            </select>
+          </div>
+          <div class="gioiTinh">
+            <label for="">Giới Tính:</label>
+            <br />
+
+            <div class="selectGender">
+              <div class="Nam">
+                <input
+                  id="gioiTinhNam"
+                  type="radio"
+                  name="gioiTinh"
+                  value="Nam"
+                />
+                <label for="gioiTinhNam">Nam</label>
+              </div>
+
+              <div class="Nu">
+                <input
+                  id="gioiTinhNam"
+                  type="radio"
+                  name="gioiTinh"
+                  value="Nu"
+                />
+                <label for="gioiTinhNam">Nữ</label>
+              </div>
+            </div>
+          </div>
+          <div class="diemManh">
+            <label>Điểm Mạnh:</label><br />
+            <div class="choice_group">
+              <span class="choice">
+                <input
+                  type="checkbox"
+                  name="diemManh"
+                  id="diemManh1"
+                  value="Lập Trình"
+                />
+                <label for="diemManh1">Lập Trình</label>
+              </span>
+
+             <span class="choice">
+                <input
+                  type="checkbox"
+                  name="diemManh"
+                  id="diemManh2"
+                  value="Thiết Kế"
+                />
+                <label for="diemManh2">Thiết Kế</label>
+             </span class="choice">
+            </div>
+            <div class="choice_group">
+              <span class="choice">
+                <input
+                  type="checkbox"
+                  name="diemManh"
+                  id="diemManh3"
+                  value="Làm Việc Nhóm"
+                />
+                <label for="diemManh3">Làm Việc Nhóm</label>
+              </span class="choice">
+
+              <span class="choice">
+                <input
+                  type="checkbox"
+                  name="diemManh"
+                  id="diemManh4"
+                  value="Giao Tiếp"
+                />
+                <label for="diemManh4">Giao Tiếp</label>
+              </span class="choice">
+            </div>
+            <div class="diff">
+              <label for="diemManh5" >Khác: </label>
+              <input type="text" name="diemManh" id="diemManh5" />
+            </div>
+          </div>
+          <div class="gioiThieu">
+            <label for="gioiThieu">Giới Thiệu:</label>
+            <textarea name="doanGioiThieu" id="gioiThieu" placeholder="Vài điều về bạn"></textarea>
+          </div>
+          <div class="control">
+            <div >
+              <input type="reset" value="Nhập Lại" />
+            </div>
+            <div >
+              <input type="submit" value="Đăng Ký" />
+            </div>
+            
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
