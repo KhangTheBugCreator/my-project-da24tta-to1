@@ -1,0 +1,12 @@
+#formInBCC{
+    text-align: center;
+    border:1px solid black;
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+}
+#formInBCC h2{
+    text-align: center;
+    padding-bottom: 30px;
+    border-bottom: 1px solid black;
+}

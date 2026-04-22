@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>page6</title>
+</head>
+<body>
+    <div id="container">
+        <input type="button" value="Thêm" onclick="add()">
+    </div>
+
+    <script>
+        function add(){
+            const myRow=document.createElement("div");
+            myRow.setAttribute("class","row");
+            const myTxt=document.createTextNode("heheeheeeeeeeeeeeeeeeee");
+            myRow.appendChild(myTxt);
+            document.getElementById("container").appendChild(myRow);
+        }
+
+    </script>
+</body>
+</html>
