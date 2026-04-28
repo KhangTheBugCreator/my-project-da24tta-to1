@@ -1,23 +1,122 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="vi">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>page6</title>
-</head>
-<body>
+    <style>
+      .row {
+        margin-bottom: 12px;
+      }
+      .row input,
+      .row select {
+        margin-right: 8px;
+        padding: 6px 8px;
+      }
+    </style>
+  </head>
+  <body>
     <div id="container">
-        <input type="button" value="Thêm" onclick="add()">
+      <input type="button" value="Thêm" onclick="add()" />
     </div>
 
     <script>
-        function add(){
-            const myRow=document.createElement("div");
-            myRow.setAttribute("class","row");
-            const myTxt=document.createTextNode("heheeheeeeeeeeeeeeeeeee");
-            myRow.appendChild(myTxt);
-            document.getElementById("container").appendChild(myRow);
+      function add() {
+        // myRow.className = "row";
+
+        // const inputName = document.createElement("input");
+        // inputName.type = "text";
+        // inputName.placeholder = "Tên môn";
+        // inputName.name = "ten_mon[]";
+
+        // const inputCredits = document.createElement("input");
+        // inputCredits.type = "number";
+        // inputCredits.placeholder = "Số tín chỉ";
+        // inputCredits.name = "so_tin_chi[]";
+        // inputCredits.min = "0";
+
+        // const selectType = document.createElement("select");
+        // selectType.name = "loai_mon[]";
+
+        // const optionCoSo = document.createElement("option");
+        // optionCoSo.value = "co_so";
+        // optionCoSo.textContent = "Môn cơ sở";
+
+        // const optionChuyenNganh = document.createElement("option");
+        // optionChuyenNganh.value = "chuyen_nganh";
+        // optionChuyenNganh.textContent = "Môn chuyên ngành";
+
+        // selectType.appendChild(optionCoSo);
+        // selectType.appendChild(optionChuyenNganh);
+
+        // myRow.appendChild(inputName);
+        // myRow.appendChild(inputCredits);
+        // myRow.appendChild(selectType);
+        const myRow = document.createElement("div");
+        myRow.setAttribute("class", "row");
+
+        const tenMon = document.createElement("input");
+        tenMon.setAttribute("type", "text");
+        tenMon.setAttribute("placeholder", "Nhập Tên Môn");
+        tenMon.setAttribute("name", "tenMon");
+
+        const tinChi = document.createElement("input");
+        tinChi.setAttribute("type", "number");
+        tinChi.setAttribute("min", 0);
+        tinChi.setAttribute("placeholder", "Số lượng tín chỉ");
+        tinChi.setAttribute("name", "soLuongTinChi");
+
+        const loaiMon = document.createElement("select");
+        loaiMon.setAttribute("name", "loaiMon");
+
+        const coSo = document.createElement("option");
+        coSo.setAttribute("value", "monCoSo");
+        coSo.selected = true;
+        coSo.textContent = "Môn Cơ Sở";
+
+        const chuyenNganh = document.createElement("option");
+        chuyenNganh.setAttribute("value", "monChuyenNganh");
+        chuyenNganh.textContent = "Môn Chuyên Ngành";
+
+        loaiMon.appendChild(chuyenNganh);
+        loaiMon.appendChild(coSo);
+
+        const hocPhi = document.createElement("input");
+        hocPhi.setAttribute("type", "text");
+        hocPhi.setAttribute("placeholder", "Học Phí");
+        hocPhi.setAttribute("name", "hocPhi");
+        hocPhi.readOnly = true;
+
+        function tinhHocPhi() {
+          const soTin = parseInt(tinChi.value) || 0;
+          let giaTin = 0;
+
+          if (loaiMon.value === "monCoSo") {
+            giaTin = 500000;
+          } else if (loaiMon.value === "monChuyenNganh") {
+            giaTin = 600000;
+          }
+
+          const tong = soTin * giaTin;
+          hocPhi.value = tong + " đ";
         }
 
+        const resetBtn = document.createElement("button");
+        resetBtn.setAttribute("type", "reset");
+        resetBtn.textContent = "RESET";
+
+        tinChi.addEventListener("input", tinhHocPhi); /*k có dấu ngoặc của hàm*/
+        loaiMon.addEventListener("change", tinhHocPhi);
+        myRow.appendChild(tenMon);
+        myRow.appendChild(tinChi);
+        myRow.appendChild(loaiMon);
+        myRow.appendChild(hocPhi);
+        myRow.appendChild(resetBtn);
+
+        const myFrm = document.createElement("form");
+        myFrm.setAttribute("name", "myForm");
+        myFrm.appendChild(myRow);
+        document.getElementById("container").appendChild(myFrm);
+      }
     </script>
-</body>
+  </body>
 </html>
