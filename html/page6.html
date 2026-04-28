@@ -70,12 +70,13 @@
 
         const coSo = document.createElement("option");
         coSo.setAttribute("value", "monCoSo");
-        coSo.selected = true;
+        // coSo.selected = true;
         coSo.textContent = "Môn Cơ Sở";
 
         const chuyenNganh = document.createElement("option");
         chuyenNganh.setAttribute("value", "monChuyenNganh");
         chuyenNganh.textContent = "Môn Chuyên Ngành";
+        chuyenNganh.selected = true;
 
         loaiMon.appendChild(chuyenNganh);
         loaiMon.appendChild(coSo);
